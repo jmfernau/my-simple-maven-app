@@ -12,9 +12,7 @@ pipeline {
             }
         }
         stage('Docker Build') {
-            steps {
-                docker.build("demo-app:v1")
-            }
+          docker.build("demo-app:v1")
         }
         stage('Deliver') {
             steps {
