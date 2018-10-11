@@ -13,7 +13,9 @@ pipeline {
         }
         stage('Docker Build') {
           steps {
-            docker.build("demo-app:v1")
+            script {
+              docker.build("demo-app:v1")
+            }
           }
         }
         stage('Deliver') {
