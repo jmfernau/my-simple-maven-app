@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t demo .'
+                docker.build("demo-app:v1")
             }
         }
         stage('Deliver') {
